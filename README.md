@@ -22,7 +22,7 @@ This application leverages advanced AI to understand and answer questions based 
 3. Alternatively, you may navigate to the "templates/index.html" and run a live server from VS Code.
 
 ### File Handling
-Use custom command `python manage.py file_handler <filename>` to upload and process files.
+Use custom command `python manage.py file_handler <filepath>` to upload and process files.
 The file_handler custom command handles the splitting, embedding and saving to the chunks to the persistent ChromaDB.
 
 ## API Interaction
