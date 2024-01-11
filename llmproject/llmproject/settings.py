@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'backend',
+    'frontend',
     'corsheaders'
 ]
 
@@ -58,7 +59,7 @@ ROOT_URLCONF = 'llmproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR/'frontend'],
+        'DIRS': [BASE_DIR/'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -114,8 +115,12 @@ AUTH_PASSWORD_VALIDATORS = [
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",  # or the domain/port your frontend is served from
     "http://127.0.0.1:5500",
+    "http://127.0.0.1:8001",
+    "http://localhost:8001"
+    
     # Add other origins as needed
 ]
+
 
 
 # Internationalization

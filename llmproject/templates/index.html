@@ -22,7 +22,7 @@
         body {
             font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            background: linear-gradient(to right, #ff758c, #ff7eb3); /* New Gradient background */
+            background: linear-gradient(to right, #002244, #013a74); /* New Gradient background */
             color: #333;
             padding: 20px;
         }
@@ -56,12 +56,12 @@
         /* Updated Textarea Styling */
         textarea {
             font-family: 'Fira Sans', sans-serif;/* Updated font */
-            padding: 10px; /* Added padding */
+            padding: 15px; /* Added padding */
             height: 150px; /* Increased height */
         }
 
         input[type="submit"] {
-            background: #4caf50;
+            background: #002244;
             color: white;
             border: 0;
             padding: 10px;
@@ -71,13 +71,13 @@
         }
 
         input[type="submit"]:hover {
-            background: #45a049;
+            background: #002244;
         }
 
         /* Result container */
         .result {
             background-color: #f2f2f2;
-            border-left: 4px solid #ff758c; /* Updated border color to match gradient */
+            border-left: 4px solid #002244; /* Updated border color to match gradient */
             padding: 15px;
             margin: 20px auto;
             max-width: 500px;
@@ -87,7 +87,7 @@
 
         /* Loading Indicator Style */
         .loading {
-            color: #2193b0;
+            color: #02171c;
             font-style: italic;
         }
     </style>
@@ -119,7 +119,7 @@
             var password = '1234';
             var basicAuth = 'Basic ' + btoa(username + ':' + password);
     
-            fetch('http://127.0.0.1:8000/question-answer/', {
+            fetch('http://127.0.0.1:8000/api/question-answer/', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
