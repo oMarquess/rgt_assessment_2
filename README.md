@@ -35,6 +35,3 @@ A web-based UI for user interaction, featuring a loading bar for processing.
 
 ## Contributing
 Contributions are welcome. Please fork the repository and submit pull requests.
-
-## License
-Apache
