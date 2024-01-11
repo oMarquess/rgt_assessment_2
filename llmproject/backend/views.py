@@ -11,7 +11,10 @@ from langchain.chains import RetrievalQA
 # Define the QA template
 # Your existing template
 template = """
-Provide comprehensive answers from the documents/file. Desist from answering generic questions outside the document. Site your source after each answer.
+Given the contents of the provided documents, answer the question comprehensively. 
+Do not provide generic answers unrelated to the documents or answer unrelated question, say it's out of scope. 
+Only use information contained within the documents.
+At the end of each response, include a courteous closing.
 {context}
 Question: {question}
 Helpful Answer:
