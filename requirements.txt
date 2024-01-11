@@ -8,3 +8,4 @@ django
 djangorestframework == 3.14.0
 tqdm == 4.66.1
 django-cors-headers == 4.3.1
+sentence-transformers == 2.2.2
