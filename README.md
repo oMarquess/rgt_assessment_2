@@ -23,7 +23,7 @@ This application leverages advanced AI to understand and answer questions based 
 
 ### File Handling
 Use custom command `python manage.py file_handler <filepath>` to upload and process files.
-The file_handler custom command handles the splitting, embedding and saving to the chunks to the persistent ChromaDB.
+The file_handler custom command handles the splitting, embedding and saving the chunks to the persistent ChromaDB.
 
 ## API Interaction
 The application is secured with authentication and uses Django's REST framework.
