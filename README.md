@@ -24,14 +24,12 @@ This application leverages advanced AI to understand and answer questions based 
 3. Alternatively, you may navigate to the "templates/index.html" and run a live server from VS Code.
 
 ### File Handling
-Use custom command `python manage.py file_handler <filepath>` to upload and process files.
-The file_handler custom command handles the splitting, embedding and saving the chunks to the persistent ChromaDB.
+4. Drop your PDF or CSV file in the `library` folder and run the command `python manage.py file_handler .\library\<filename>`
+4. Alternatively, run the command `python manage.py file_handler <path to your preferred PDF / CSV>`
+- The file_handler custom command handles the splitting, embedding and saving of the file chunks to a persistent ChromaDB.
 
 ## API Interaction
 The application is secured with authentication and uses Django's REST framework.
 
-## Frontend Application
-A web-based UI for user interaction, featuring a loading bar for processing.
-
 ## Contributing
-Contributions are welcome. Please fork the repository and submit pull requests.
+Contributions are welcome in the form of comments. 
