@@ -5,10 +5,14 @@ from rest_framework.permissions import IsAuthenticated
 from .config import llm, OPENAI_API_KEY
 from .db_config import db
 from langchain.prompts import PromptTemplate
-from langchain.chains import RetrievalQA
+from langchain.chains import RetrievalQA, ConversationalRetrievalChain
+from langchain.memory import ConversationBufferMemory
 
 # Create your views here.
-# Define the QA template
+memory = ConversationBufferMemory(
+    memory_key="chat_history",
+    return_messages=True
+)
 # Your existing template
 template = """
 Given the contents of the provided documents, answer the question comprehensively. 
@@ -29,6 +33,12 @@ qa_chain = RetrievalQA.from_chain_type(
     return_source_documents=True,
     chain_type_kwargs={"prompt": QA_CHAIN_PROMPT}
 )
+# qa_chain = ConversationalRetrievalChain.from_llm(
+#     llm,
+#     retriever=db.as_retriever(),
+#     combine_docs_chain_kwargs={"prompt": QA_CHAIN_PROMPT},
+#     memory=memory
+# )
 
 class QuestionAnswerView(APIView):
     permission_classes = [IsAuthenticated]
