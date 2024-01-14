@@ -1,4 +1,4 @@
-# Document-Understanding AI Assistant
+# Document-Understanding Home Assessment (DUHA)
 
 ## Overview
 This application leverages advanced AI to understand and answer questions based on PDF or CSV files. It utilizes LangChain, ChromaDB, and OpenAI's models.
