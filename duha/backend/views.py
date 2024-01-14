@@ -4,6 +4,7 @@ from rest_framework import status, permissions
 from langchain.vectorstores import Chroma
 from langchain.embeddings.sentence_transformer import SentenceTransformerEmbeddings
 from langchain.chains import RetrievalQA
+from langchain.memory import ConversationBufferMemory
 from langchain.prompts import PromptTemplate
 from langchain.llms import OpenAI
 from .config import OPENAI_API_KEY, llm
@@ -27,14 +28,19 @@ class QueryView(APIView):
         Helpful Answer:
         """  # Your existing template
         QA_CHAIN_PROMPT = PromptTemplate.from_template(template)
-
+        memory = ConversationBufferMemory(
+                memory_key="chat_history",
+                return_messages=True
+                )
         # Create the retriever and RQA chain
         retriever = db.as_retriever(search_type="similarity", search_kwargs={"k": 4})
         rqa = RetrievalQA.from_chain_type(llm,
                                           chain_type="stuff",
                                           retriever=retriever,
                                           chain_type_kwargs={"prompt": QA_CHAIN_PROMPT},
-                                          return_source_documents=True)
+                                          memory=memory,
+                                          #return_source_documents=True
+                                          )
 
         # Get the query from the request
         query = request.data.get('query', '')
