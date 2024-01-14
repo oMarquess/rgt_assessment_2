@@ -14,7 +14,7 @@ This application leverages advanced AI to understand and answer questions based 
 
 ## Running the Application
 0. `pip install -r requirements.txt`
-1. `cd llmproject`
+1. `cd duha`
 
 ### Backend :: [Django-Rest Framework - API Engine]
 2. Run `python manage.py runserver 8000` to start the Django server on port 8000.
