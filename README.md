@@ -11,6 +11,7 @@ This application leverages advanced AI to understand and answer questions based 
 - Integration with LangChain and OpenAI's models.
 - ChromaDB for embedding data storage and retrieval.
 - LangChain for conversational and user feedback mechanism based on memory.
+- Context limited to the provided document.
 
 ## Running the Application
 0. `pip install -r requirements.txt`
