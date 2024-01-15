@@ -25,7 +25,7 @@ This application leverages advanced AI to understand and answer questions based 
 3. Alternatively, you may navigate to the "templates/index.html" and run a live server from VS Code.
 
 ### File Handling
-4. Drop your PDF or CSV file in the `library` folder and run the command `python manage.py file_handler .\library\<filename>`
+4. Drop your PDF or CSV file in the `library` folder which has been listed in .gitignore file [kindly recreate it in the duha/ directory] and run the command `python manage.py file_handler .\library\<filename>`
 4. Alternatively, run the command `python manage.py file_handler <path to your preferred PDF / CSV>`
 - The file_handler custom command handles the splitting, embedding and saving of the file chunks to a persistent ChromaDB.
 
