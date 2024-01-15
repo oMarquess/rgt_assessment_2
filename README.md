@@ -10,7 +10,7 @@ This application leverages advanced AI to understand and answer questions based 
 - Django Rest API Backend with a frontend application.
 - Integration with LangChain and OpenAI's models.
 - ChromaDB for embedding data storage and retrieval.
-- LangChain for conversational and user feedback mechanism
+- LangChain for conversational and user feedback mechanism based on memory.
 
 ## Running the Application
 0. `pip install -r requirements.txt`
